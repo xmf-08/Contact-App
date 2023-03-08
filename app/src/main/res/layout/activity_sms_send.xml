@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SmsSendActivity">
+
+    <TextView
+        android:id="@+id/title_sms_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sms Send \n Sms"
+        android:textSize="45sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginEnd="150dp"
+        android:layout_marginTop="20sp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/kurs_name_container"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_marginHorizontal="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="200sp"
+            app:layout_constraintTop_toBottomOf="@id/title_sms_activity"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <EditText
+                android:id="@+id/edt_kurs_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:lines="1"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="start"
+                android:inputType="text"
+                android:hint="@string/type_sms"/>
+        </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:id="@+id/btn_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="send"
+        app:layout_constraintTop_toBottomOf="@id/kurs_name_container"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginEnd="25dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
